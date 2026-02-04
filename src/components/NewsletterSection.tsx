@@ -16,30 +16,31 @@ export const NewsletterSection = () => {
   return (
     <HeadlessNewsletter>
       {(logic) => (
-        <section className="bg-muted/30 py-16 border-y">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/20"></div>
+          <div className="relative max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             {logic.success ? (
-              <div className="space-y-4">
+              <div className="space-y-6">
                 <div className="flex justify-center">
-                  <div className="bg-primary/10 rounded-full p-3">
-                    <Mail className="h-8 w-8 text-primary" />
+                  <div className="bg-primary/20 rounded-full p-4 shadow-lg">
+                    <Mail className="h-10 w-10 text-primary" />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
+                <h3 className="text-3xl md:text-4xl font-bold text-foreground">
                   ¡Gracias por suscribirte!
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   Recibirás nuestras mejores ofertas y promociones pronto.
                 </p>
               </div>
             ) : (
-              <div className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-bold text-foreground">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h3 className="text-3xl md:text-4xl font-bold text-foreground">
                     ¿Quieres recibir correos promocionales?
                   </h3>
-                  <p className="text-lg text-muted-foreground">
-                    Suscríbete a nuestro boletín y obtén ofertas exclusivas
+                  <p className="text-xl text-muted-foreground">
+                    Suscríbete y obtén <span className="text-primary font-semibold">10% OFF</span> en tu primera compra
                   </p>
                 </div>
                 
